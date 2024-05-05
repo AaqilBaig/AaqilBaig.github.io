@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+/* https://coolors.co/palette/0d1b2a-1b263b-415a77-778da9-e0e1dd */
+
+html{
+    background-color: #1b263b;
+    scroll-behavior: smooth;
+    display: flex;
+}
+
+*{
+    font-family: "Nunito", sans-serif;
+    color: #e0e1dd;
+    margin: 0px;
+    text-decoration: none;
+    scrollbar-width: none;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+nav {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+  }
+  
+  ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  li {
+    margin-right: 20px; 
+  }
+
+  li:last-child {
+    margin-right: 0;
+  }
+  
+  li a {
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: x-large;
+    color: #fff; /* Add text color */
+  }
+  
+  /* Apply styles when hovering over a tab */
+  li a:hover {
+    box-shadow: 0px -5px 0 0 inset #778da9;
+  }
+  
+  /* Apply styles when a tab is clicked (active state) */
+  li a:focus {
+    box-shadow: 0px -5px 0 0 inset #778da9;
+  }
+  
+  /* Media query for smaller screens */
+
+  #about{
+    width: 100%;
+    display: flex;
+  }
+
+  .title{
+    width: auto;
+    padding-right: 70px;
+  }
+  
+  .title P{
+    padding-top: 25px;
+  }
+
+  .image-container {
+    background-color: #0d1b2a;
+    min-width: 205px; /* Adjust size as needed */
+    height: 200px; /* Adjust size as needed */
+    border-radius: 50%; /* Make it round */
+    overflow: hidden; /* Ensure image doesn't overflow */
+    box-shadow: 0 0 20px #263647; /* Add round shadow */
+
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio */
+  }
+  .title h1{
+    font-weight: 700;
+    font-size: 3rem;
+    color: #e0e1dd;
+    padding-bottom: 25px;
+  }
+  .body{
+    padding: 70px 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .heading{
+    padding-top: 50px;
+    text-decoration: underline;
+    text-underline-offset: 15px;
+  }
+  
+  #projects{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 50px;
+    justify-content: space-between;
+  }
+
+  .project{
+    background-color: #778da9;
+    width: 40%;
+    padding: 25px;
+    margin: 20px;
+    border-radius: 25px;
+    overflow: hidden; /* Hide overflow content */
+    transition: height 0.3s ease-in-out; /* Smooth transition for width change */
+    height: 100px; /* Fixed initial height */
+  }
+
+  .project:hover {
+    height: 180px; /* Expand on hover */
+    transition: height 0.3s ease-in-out;
+  }
+
+  .project h2{
+    color: #0d1b2a;
+    padding-bottom: 10px;
+    
+  }
+
+  .project p{
+    color: #e0e1dd;
+    padding-top: 10px;
+    opacity: 0; /* Initially hide text */
+    transition: opacity 0.3s ease-in-out; /* Smooth transition for opacity change */
+  }
+
+  .project:hover p {
+    opacity: 1; /* Show text on hover */
+  }
+
+  .git{
+    display: flex;
+    position: relative;
+    top: 10px;
+    align-items: center;
+    background-color: #0d1b2a;
+    padding: 5px 5px;
+    border-radius: 30px;
+    width: 10%;
+    overflow: hidden;
+    transition: width 0.3s ease-in-out;
+  }
+
+  .git:hover{
+    width: 35%;
+  }
+
+  .git span{
+    padding-left: 10px;
+    opacity: 0; 
+    transition: opacity 0.3s ease-in-out;
+    display: none;
+  }
+
+  .git:hover span{
+    opacity: 1;
+    display: inline;
+  }
+  
+  .git img{
+    width: 36px;
+    height: auto;
+  }
+
+  #skills{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 40px;
+  }
+  .skill{
+    padding: 2rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill img{
+    height: 80px;
+    width: auto;
+  }
+  
+  #contacts{
+    display: flex;
+    padding-top: 50px;
+  }
+  
+  .contact{
+    padding: 25px 30px;
+    border: #778da9 solid 1px;
+    border-radius: 30px;
+    margin: 25px 30px;
+    transition: all 0.3s ease-in-out;
+    width: 14vw;
+  }
+
+  .footer{
+    background-color: #0d1b2a;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .contact:hover{
+    background-color: #778da9;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .contact:hover h3{
+    color: #0d1b2a;
+  }
+
+  .contact:hover p{
+    color: #0d1b2a;
+  }
+
+  @media screen and (max-width: 1200px) {
+    .project,.skill,.contact{
+      width: 90%;
+      height: 50px;
+      padding: 4vh;
+      overflow-y: scroll;
+    }
+    #projects,#skills,#contacts{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-wrap: nowrap;
+    }
+    #about{
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+    .title{
+      width: 100%;
+      padding: 5px 10px;
+    }
+    .body{
+      padding: 30px 50px;
+    }
+    .image-container{
+      height: 50%;
+      width: 50%;
+    }
+    nav a{
+      font-size: xx-large;
+    }
+    .title p{
+      font-size: xx-large;
+    }
+    .heading{
+      font-size: 3rem;
+    }
+    .skill{
+      height: 100%;
+    }
+    .skill h2,.skill p{
+      font-size: xx-large;
+    }
+    .contact p,h3{
+      font-size: xx-large;
+    }
+    .footer{
+      font-size: larger;
+    }
+    .project h2,.project p{
+      font-size: xx-large;
+    }
+    
+  }
